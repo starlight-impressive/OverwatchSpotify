@@ -1,11 +1,11 @@
-<h1 class="futuristic-title">SONIC ARCHIVE 2026</h1>
+<h1 class="futuristic-title">ARCHIVE INTERFACE // 2026</h1>
 
 <section class="category-section">
-    <h2 class="category-title">SECTOR ALPHA</h2>
+    <h2 class="category-title">SYSTEM ALPHA [14 UNITS]</h2>
     <div class="grid-container">
         <div class="music-card">
-            <a href="https://your-link-here.com" class="metallic-square">
-                <img src="your-image-1.jpg" alt="Album Art">
+            <a href="https://your-link.com" class="metallic-square">
+                <img src="your-image.jpg" alt="Art">
             </a>
             <span class="song-count">12 songs</span>
         </div>
@@ -13,71 +13,75 @@
 </section>
 
 <section class="category-section">
-    <h2 class="category-title">SECTOR BETA</h2>
+    <h2 class="category-title">SYSTEM BETA [23 UNITS]</h2>
     <div class="grid-container">
         <div class="music-card">
-            <a href="https://your-link-here.com" class="metallic-square">
-                <img src="your-image-15.jpg" alt="Album Art">
+            <a href="https://your-link.com" class="metallic-square">
+                <img src="your-image.jpg" alt="Art">
             </a>
-            <span class="song-count">8 songs</span>
+            <span class="song-count">10 songs</span>
         </div>
     </div>
 </section>
 
 <section class="category-section">
-    <h2 class="category-title">SECTOR GAMMA</h2>
+    <h2 class="category-title">SYSTEM GAMMA [15 UNITS]</h2>
     <div class="grid-container">
         <div class="music-card">
-            <a href="https://your-link-here.com" class="metallic-square">
-                <img src="your-image-38.jpg" alt="Album Art">
+            <a href="https://your-link.com" class="metallic-square">
+                <img src="your-image.jpg" alt="Art">
             </a>
-            <span class="song-count">15 songs</span>
+            <span class="song-count">14 songs</span>
         </div>
     </div>
 </section>
 
 <footer class="rights-footer">
-    <p>&copy; 2026. All Rights Reserved. Proprietary Digital Interface Asset.</p>
+    <p>&copy; 2026. ALL RIGHTS RESERVED. PROPRIETARY DATA INTERFACE. UNAUTHORIZED DUPLICATION IS A VIOLATION OF DIGITAL PROTOCOLS.</p>
 </footer>
 
 <style>
     :root {
-        --metal-gradient: linear-gradient(145deg, #7a7a7a, #333333);
-        --neon-accent: #00f2ff;
-        --dark-bg: #0a0a0b;
+        --metal-bg: linear-gradient(135deg, #2c2c2e 0%, #000000 100%);
+        --glow: #00f2ff;
+        --border-color: #4a4a4a;
     }
 
     body {
-        background-color: var(--dark-bg);
-        color: white;
-        font-family: 'Segoe UI', Roboto, sans-serif;
-        padding: 40px;
+        background-color: #050505;
+        color: #e0e0e0;
+        font-family: 'Orbitron', sans-serif; /* A futuristic font choice */
+        margin: 0;
+        padding: 50px;
     }
 
     .futuristic-title {
         text-align: center;
-        font-size: 3rem;
-        letter-spacing: 10px;
-        background: linear-gradient(to bottom, #fff 0%, #888 100%);
+        font-size: 2.5rem;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        background: linear-gradient(to bottom, #ffffff 20%, #444444 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
-        margin-bottom: 50px;
+        margin-bottom: 80px;
+        filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
     }
 
     .category-title {
-        border-left: 4px solid var(--neon-accent);
-        padding-left: 15px;
-        margin: 40px 0 20px;
-        font-size: 1.5rem;
-        color: #ddd;
+        color: var(--glow);
+        font-size: 1.1rem;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #222;
+        padding-bottom: 10px;
     }
 
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 30px;
-        margin-bottom: 60px;
+        /* Responsive: will fit as many 160px squares as possible per row */
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 40px;
+        margin-bottom: 80px;
     }
 
     .music-card {
@@ -87,47 +91,50 @@
     }
 
     .metallic-square {
-        width: 150px;
-        height: 150px;
-        background: var(--metal-gradient);
-        border: 2px solid #555;
-        border-radius: 4px;
-        overflow: hidden;
+        width: 160px;
+        height: 160px;
+        background: var(--metal-bg);
+        border: 1px solid var(--border-color);
+        box-shadow: 
+            5px 5px 15px rgba(0,0,0,0.8),
+            inset 0 0 10px rgba(255,255,255,0.05);
         display: block;
-        position: relative;
-        box-shadow: 5px 5px 15px rgba(0,0,0,0.5), 
-                    inset 1px 1px 2px rgba(255,255,255,0.2);
-        transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .metallic-square:hover {
-        transform: scale(1.05) translateY(-5px);
-        border-color: var(--neon-accent);
-        box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        overflow: hidden;
     }
 
     .metallic-square img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: grayscale(30%);
+        opacity: 0.8;
+    }
+
+    .metallic-square:hover {
+        transform: scale(1.08);
+        border-color: var(--glow);
+        box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+    }
+
+    .metallic-square:hover img {
+        opacity: 1;
     }
 
     .song-count {
-        margin-top: 10px;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #888;
+        margin-top: 12px;
+        font-size: 0.75rem;
+        color: #666;
+        text-transform: lowercase;
+        font-style: italic;
     }
 
     .rights-footer {
         text-align: center;
-        margin-top: 100px;
-        padding: 20px;
-        border-top: 1px solid #222;
-        font-size: 0.7rem;
-        color: #444;
-        letter-spacing: 1px;
+        margin-top: 50px;
+        padding: 40px;
+        border-top: 1px solid #111;
+        font-size: 0.65rem;
+        color: #333;
+        letter-spacing: 2px;
     }
 </style>
